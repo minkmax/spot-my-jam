@@ -6,7 +6,7 @@ const LoginHandler = (props) => {
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
   const RESPONSE_TYPE = "token";
 
-  console.log("yeet")
+  console.log("yeet", window.location)
 
   const loginLink = `${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}/&response_type=${RESPONSE_TYPE}&scope=user-top-read`;
 
