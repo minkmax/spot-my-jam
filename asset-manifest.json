@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/spot-my-jam/static/css/main.ff9b8e2b.css",
+    "main.js": "/spot-my-jam/static/js/main.863a85a0.js",
+    "index.html": "/spot-my-jam/index.html",
+    "main.ff9b8e2b.css.map": "/spot-my-jam/static/css/main.ff9b8e2b.css.map",
+    "main.863a85a0.js.map": "/spot-my-jam/static/js/main.863a85a0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ff9b8e2b.css",
+    "static/js/main.863a85a0.js"
+  ]
+}
