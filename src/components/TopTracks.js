@@ -24,8 +24,8 @@ const TopTracks = () => {
         Time Range
       </label>
       <select name="time-range" id="time-range-select" defaultValue={"medium_term"}>
-        <option value="short_term">Last 4 Weeks</option>
-        <option value="medium_term">Last 6 Months</option>
+        <option value="short_term">Past 4 Weeks</option>
+        <option value="medium_term">Past 6 Months</option>
         <option value="long_term">Past Several Years</option>
       </select>
 
