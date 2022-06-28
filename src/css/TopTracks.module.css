@@ -1,5 +1,6 @@
 .top-track-form {
   display: flex;
+  text-align: center;
 }
 
 .top-track-form label {
