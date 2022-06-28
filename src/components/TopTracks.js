@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import TokenAuthContext from "../store/token-auth-context";
+import classes from '../css/TopTracks.module.css';
 
 const TopTracks = () => {
   const ctx = useContext(TokenAuthContext);
@@ -19,9 +20,9 @@ const TopTracks = () => {
 
   return (
     <>
-    <form onSubmit={getTracks}>
+    <form className={classes["top-track-form"]} onSubmit={getTracks}>
       <label htmlFor="time-range-select">
-        Time Range
+        Time Range:
       </label>
       <select name="time-range" id="time-range-select" defaultValue={"medium_term"}>
         <option value="short_term">Past 4 Weeks</option>
