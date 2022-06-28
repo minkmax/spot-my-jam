@@ -9,7 +9,7 @@ const App = () => {
   const ctx = useContext(TokenAuthContext);
 
   return (
-    <>
+    <div className={classes.container}>
       <div className={classes.introduction}>
         <h1>Spot My Jam</h1>
         <p>A simple app to check your most-listened-to artists and tracks!</p>
@@ -17,7 +17,7 @@ const App = () => {
       {!ctx.token && <LoginHandler />}
       {ctx.token && <TopTracks />}
       {ctx.token && <LogoutHandler />}
-    </>
+    </div>
   );
 }
 
