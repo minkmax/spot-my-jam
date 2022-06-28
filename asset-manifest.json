@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/spot-my-jam/static/css/main.ff9b8e2b.css",
+    "main.css": "/spot-my-jam/static/css/main.cf5354e7.css",
     "main.js": "/spot-my-jam/static/js/main.ecaae4fd.js",
     "index.html": "/spot-my-jam/index.html",
-    "main.ff9b8e2b.css.map": "/spot-my-jam/static/css/main.ff9b8e2b.css.map",
+    "main.cf5354e7.css.map": "/spot-my-jam/static/css/main.cf5354e7.css.map",
     "main.ecaae4fd.js.map": "/spot-my-jam/static/js/main.ecaae4fd.js.map"
   },
   "entrypoints": [
-    "static/css/main.ff9b8e2b.css",
+    "static/css/main.cf5354e7.css",
     "static/js/main.ecaae4fd.js"
   ]
 }
