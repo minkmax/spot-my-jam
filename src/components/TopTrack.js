@@ -11,6 +11,7 @@ const TopTrack = (props) => {
       </div>
       <div className={classes.text}>
         <div className={classes['track-name']}>{props.name}</div>
+        <div>by {props.artists[0].name}</div>
         <div className={classes['album-name']}>{props.album.name}</div>
       </div>
     </div>
