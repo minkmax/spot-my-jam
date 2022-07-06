@@ -26,5 +26,15 @@
 }
 
 .introduction p {
+  margin: 0 auto 2rem;
+  max-width: 50rem;
   font-size: 24px;
+}
+
+.content {
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 10px; 
+  max-width: 50rem;
+  background-color: #3d3636;
 }

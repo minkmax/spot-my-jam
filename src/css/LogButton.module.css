@@ -13,9 +13,3 @@
   text-decoration: none;
   border-radius: 500px;
 }
-
-@media (min-width: 768px) {
-  .log-button {
-    width: 40%
-  }
-}

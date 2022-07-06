@@ -14,9 +14,11 @@ const App = () => {
         <h1>Spot My Jam</h1>
         <p>A simple app to check your most-listened-to artists and tracks!</p>
       </div>
-      {!ctx.token && <LoginHandler />}
-      {ctx.token && <TopTracks />}
-      {ctx.token && <LogoutHandler />}
+      <div className={classes.content}>
+        {!ctx.token && <LoginHandler />}
+        {ctx.token && <TopTracks />}
+        {ctx.token && <LogoutHandler />}
+      </div>
     </div>
   );
 }
