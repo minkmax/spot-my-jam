@@ -3,7 +3,7 @@ import LoginHandler from "./components/LoginHandler";
 import TokenAuthContext from "./store/token-auth-context";
 import classes from "./css/App.module.css";
 import LogoutHandler from "./components/LogoutHandler";
-import TopTracks from "./components/TopTracks";
+import TopItems from "./components/TopItems";
 
 const App = () => {
   const ctx = useContext(TokenAuthContext);
@@ -16,7 +16,7 @@ const App = () => {
       </div>
       <div className={classes.content}>
         {!ctx.token && <LoginHandler />}
-        {ctx.token && <TopTracks />}
+        {ctx.token && <TopItems />}
         {ctx.token && <LogoutHandler />}
       </div>
     </div>

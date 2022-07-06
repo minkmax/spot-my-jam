@@ -1,8 +1,9 @@
 import { useContext, useState } from "react";
 import TokenAuthContext from "../store/token-auth-context";
-import classes from '../css/TopTracks.module.css';
+import classes from '../css/TopItems.module.css';
+import button from '../css/LogButton.module.css';
 
-const TopTracks = () => {
+const TopItems = () => {
   const ctx = useContext(TokenAuthContext);
 
   const [timeRange, setTimeRange] = useState("medium_term");
@@ -20,7 +21,7 @@ const TopTracks = () => {
 
   return (
     <>
-    <form className={classes["top-track-form"]} onSubmit={getTracks}>
+    <form className={classes["top-item-form"]} onSubmit={getTracks}>
       <label htmlFor="time-range-select">
         Time Range:
       </label>
@@ -31,9 +32,12 @@ const TopTracks = () => {
       </select>
 
     </form>
-      <button onClick={getTracks}>Get Top Artists</button>
+    <div className={classes["buttons"]}>
+      <button className={`${button["log-button"]} ${button["submit-button"]}`} onClick={getTracks}>Get Top Artists</button>
+      <button className={`${button["log-button"]} ${button["submit-button"]}`} onClick={getTracks}>Get Top Tracks</button>
+    </div>
     </>
   );
 };
 
-export default TopTracks;
+export default TopItems;
