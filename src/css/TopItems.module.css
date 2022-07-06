@@ -21,3 +21,17 @@
 .buttons {
   display: flex;
 }
+
+ul {
+  /* width: 100%; */
+  padding: 1rem;
+  margin: 0;
+}
+
+.track-name {
+  margin: auto auto 1rem;
+}
+
+.album-name {
+  margin: 1rem auto auto;
+}

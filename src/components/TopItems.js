@@ -12,7 +12,9 @@ const TopItems = () => {
   const [topArtists, setTopArtists] = useState({});
 
   async function getTracks() {
-    const data = await fetch(`https://api.spotify.com/v1/me/top/tracks`, {
+    const data = await fetch('https://api.spotify.com/v1/me/top/tracks?' + new URLSearchParams({
+      time_range: timeRange
+    }), {
       method: "GET",
       headers: {
         Authorization: "Bearer " + ctx.token,
@@ -25,7 +27,9 @@ const TopItems = () => {
   }
 
   async function getArtists() {
-    const data = await fetch(`https://api.spotify.com/v1/me/top/artists`, {
+    const data = await fetch('https://api.spotify.com/v1/me/top/artists?' + new URLSearchParams({
+      time_range: timeRange
+    }), {
       method: "GET",
       headers: {
         Authorization: "Bearer " + ctx.token,
@@ -41,7 +45,9 @@ const TopItems = () => {
     setTimeRange(event.target.value);
   }
 
-  console.log(Object.entries(topTracks).length)
+  console.log(timeRange)
+  console.log('https://api.spotify.com/v1/me/top/artists' + new URLSearchParams({
+    time_range: timeRange}));
 
   return (
     <>
