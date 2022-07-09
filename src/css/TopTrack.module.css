@@ -4,7 +4,6 @@
   margin-bottom: 1rem;
   margin-right: auto;
   margin-left: auto;
-  /* background-color: red; */
 }
 
 .album-img {
@@ -20,13 +19,6 @@
   margin: auto;
 }
 
-@media (min-width: 768px) {
-  .album-img img {
-    width: 100%;
-    margin: auto;
-  }
-}
-
 .text {
   display: flex;
   flex-direction: column;
@@ -36,7 +28,7 @@
   margin-right: auto;
   padding-left: 10px;
   padding-right: 10px;
-  font-size: 32px;
+  font-size: 16px;
 }
 
 .track-name {
@@ -45,4 +37,15 @@
 
 .album-name {
   margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .album-img img {
+    width: 100%;
+    margin: auto;
+  }
+
+  .text {
+    font-size: 32px;
+  }
 }

@@ -1,4 +1,3 @@
-import TopTracksList from "./TopTracksList";
 import classes from "../css/TopTrack.module.css";
 
 const TopTrack = (props) => {

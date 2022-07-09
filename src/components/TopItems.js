@@ -1,17 +1,20 @@
 import { useContext, useState } from "react";
 import TokenAuthContext from "../store/token-auth-context";
 import classes from '../css/TopItems.module.css';
-import button from '../css/LogButton.module.css';
+import button from '../css/Button.module.css';
 import TopTracksList from "./TopTracksList";
 
 const TopItems = () => {
   const ctx = useContext(TokenAuthContext);
 
   const [timeRange, setTimeRange] = useState("medium_term");
+  const [shownTimeRange, setShownTimeRange] = useState("Past 6 Months");
   const [topTracks, setTopTracks] = useState({});
   const [topArtists, setTopArtists] = useState({});
 
+  // TODO: Can probably merge the get functions
   async function getTracks() {
+    clearTopArtists();
     const data = await fetch('https://api.spotify.com/v1/me/top/tracks?' + new URLSearchParams({
       time_range: timeRange
     }), {
@@ -27,6 +30,7 @@ const TopItems = () => {
   }
 
   async function getArtists() {
+    clearTopTracks();
     const data = await fetch('https://api.spotify.com/v1/me/top/artists?' + new URLSearchParams({
       time_range: timeRange
     }), {
@@ -43,11 +47,16 @@ const TopItems = () => {
 
   const timeRangeChangeHandler = (event) => {
     setTimeRange(event.target.value);
+    setShownTimeRange(event.target.options[event.target.selectedIndex].text);
   }
 
-  console.log(timeRange)
-  console.log('https://api.spotify.com/v1/me/top/artists' + new URLSearchParams({
-    time_range: timeRange}));
+  const clearTopTracks = () => {
+    setTopTracks({});
+  }
+
+  const clearTopArtists = () => {
+    setTopArtists({});
+  }
 
   return (
     <>
@@ -62,10 +71,10 @@ const TopItems = () => {
         </select>
       </form>
       <div className={classes["buttons"]}>
-        <button className={`${button["log-button"]} ${button["submit-button"]}`} onClick={getTracks}>Get Top Tracks</button>
-        <button className={`${button["log-button"]} ${button["submit-button"]}`} onClick={getArtists}>Get Top Artists</button>
+        <button className={`${button["button"]} ${button["submit-button"]}`} onClick={getTracks}>Get Top Tracks</button>
+        <button className={`${button["button"]} ${button["submit-button"]}`} onClick={getArtists}>Get Top Artists</button>
       </div>
-      {Object.entries(topTracks).length > 0 && <TopTracksList tracks={topTracks}></TopTracksList>}
+      {Object.entries(topTracks).length > 0 && <TopTracksList onClearTopTracks={clearTopTracks} tracks={topTracks} shownTimeRange={shownTimeRange}></TopTracksList>}
     </>
   );
 };

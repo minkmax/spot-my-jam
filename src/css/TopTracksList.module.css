@@ -1,0 +1,11 @@
+.heading {
+  margin: 1rem;
+  text-align: center;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: 32px;
+  }
+}

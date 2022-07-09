@@ -1,4 +1,4 @@
-import classes from "../css/LogButton.module.css";
+import classes from "../css/Button.module.css";
 
 const LoginHandler = (props) => {
   const CLIENT_ID = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
@@ -8,10 +8,8 @@ const LoginHandler = (props) => {
 
 
   const loginLink = `${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=user-top-read`;
-
-  console.log(window.location.origin + window.location.pathname);
   return (
-    <a href={loginLink} className={classes["log-button"]}>
+    <a href={loginLink} className={classes["button"]}>
       Log In to Spotify
     </a>
   );
