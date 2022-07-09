@@ -1,12 +1,12 @@
 import { useContext } from 'react';
-import classes from "../css/LogButton.module.css";
+import classes from "../css/Button.module.css";
 import TokenAuthContext from '../store/token-auth-context';
 
 const LogoutHandler = () => {
   const ctx = useContext(TokenAuthContext);
 
   return (
-    <button onClick={ctx.logOutHandler} className={classes["log-button"]}>Logout</button> 
+    <button onClick={ctx.logOutHandler} className={classes["button"]}>Logout</button> 
   )
 }
 

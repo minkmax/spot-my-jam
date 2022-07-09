@@ -1,0 +1,37 @@
+.top-item-form {
+  display: flex;
+  text-align: center;
+}
+
+.top-item-form label {
+ margin-left: auto;
+ margin-right: 20px;
+ font-size: 24px;
+}
+
+.top-item-form select {
+  font-family: inherit;
+  font-size: 24px;
+  border-radius: 10px;
+  color: white;
+  margin-right: auto;
+  background-color: #222;
+}
+
+.buttons {
+  display: flex;
+}
+
+ul {
+  /* width: 100%; */
+  padding: 1rem;
+  margin: 0;
+}
+
+.track-name {
+  margin: auto auto 1rem;
+}
+
+.album-name {
+  margin: 1rem auto auto;
+}

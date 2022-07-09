@@ -1,10 +1,15 @@
 .container {
   width: 100%;
-    max-width: 78.75rem;
-    margin-right: auto;
-    margin-left: auto;
+  max-width: 78.75rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
     padding-right: 1.875rem;
     padding-left: 1.875rem;
+  }
 }
 
 .introduction {
@@ -21,5 +26,15 @@
 }
 
 .introduction p {
+  margin: 0 auto 2rem;
+  max-width: 50rem;
   font-size: 24px;
+}
+
+.content {
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 10px; 
+  max-width: 50rem;
+  background-color: #3d3636;
 }
