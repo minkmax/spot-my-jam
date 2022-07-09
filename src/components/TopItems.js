@@ -3,6 +3,7 @@ import TokenAuthContext from "../store/token-auth-context";
 import classes from '../css/TopItems.module.css';
 import button from '../css/Button.module.css';
 import TopTracksList from "./TopTracksList";
+import TopArtistsList from "./TopArtistsList";
 
 const TopItems = () => {
   const ctx = useContext(TokenAuthContext);
@@ -75,6 +76,7 @@ const TopItems = () => {
         <button className={`${button["button"]} ${button["submit-button"]}`} onClick={getArtists}>Get Top Artists</button>
       </div>
       {Object.entries(topTracks).length > 0 && <TopTracksList onClearTopTracks={clearTopTracks} tracks={topTracks} shownTimeRange={shownTimeRange}></TopTracksList>}
+      {Object.entries(topArtists).length > 0 && <TopArtistsList onClearTopArtists={clearTopArtists} artists={topArtists} shownTimeRange={shownTimeRange}></TopArtistsList>}
     </>
   );
 };
