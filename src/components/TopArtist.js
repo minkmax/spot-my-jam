@@ -4,11 +4,11 @@ const TopArtist = (props) => {
 
   return (
     <div className={classes.track}>
-      <div className={classes['album-img']}>
+      <div className={classes['list-img']}>
         <img src={props.image} alt="artist" />
       </div>
       <div className={classes.text}>
-        <div className={classes['track-name']}>{props.name}</div>
+        <div className={classes['list-name']}>{props.name}</div>
       </div>
     </div>
   );

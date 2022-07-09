@@ -5,8 +5,6 @@ import classes from "../css/TopTracksList.module.css";
 // TODO: Merge this into one top component?
 const TopArtistsList = (props) => {
   const topArtistsArray = props.artists.items;
-
-  console.log(topArtistsArray);
   return (
     <>
       {topArtistsArray && (
