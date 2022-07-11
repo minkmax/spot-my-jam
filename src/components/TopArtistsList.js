@@ -1,33 +1,34 @@
-import TopTrack from "./TopTrack";
+import TopArtist from "./TopArtist";
 import button from "../css/Button.module.css";
 import classes from "../css/TopTracksList.module.css";
 
-const TopTracksList = (props) => {
-  const topTracksArray = props.tracks.items;
-
+// TODO: Merge this into one top component?
+const TopArtistsList = (props) => {
+  const topArtistsArray = props.artists.items;
   return (
     <>
-      {topTracksArray && (
+      {topArtistsArray && (
         <>
           <button
             className={`${button["button"]}`}
-            onClick={props.onClearTopTracks}
+            onClick={props.onClearTopArtists}
           >
-            Clear Top Tracks
+            Clear Top Artists
           </button>
+          <div className={classes.explanation}> Clear top artists to show buttons again.</div>
           <div className={classes.heading}>
-            Top tracks from the {props.shownTimeRange.toLowerCase()}
+            Top artists from the {props.shownTimeRange.toLowerCase()}
           </div>
         </>
       )}
+      
       <ul>
-        {topTracksArray ? (
-          topTracksArray.map((track) => (
-            <TopTrack
-              name={track.name}
-              artists={track.artists}
-              album={track.album}
-              key={track.id}
+        {topArtistsArray ? (
+          topArtistsArray.map((artist) => (
+            <TopArtist
+              name={artist.name}
+              image={artist.images[0].url}
+              key={artist.id}
             />
           ))
         ) : (
@@ -40,4 +41,4 @@ const TopTracksList = (props) => {
   );
 };
 
-export default TopTracksList;
+export default TopArtistsList;

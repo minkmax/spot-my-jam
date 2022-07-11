@@ -1,17 +1,25 @@
 .button {
   display: block;
+  margin-top: 1rem;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   width: 60%;
   font-family: inherit;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: bold;
   padding: 14px 32px;
   color: black;
   background-color: #1ed760;
   text-decoration: none;
   border-radius: 30px;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .button {
+    font-size: 24px;
+  }
 }
 
 .submit-button {
