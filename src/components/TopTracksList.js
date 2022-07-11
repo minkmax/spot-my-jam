@@ -15,6 +15,7 @@ const TopTracksList = (props) => {
           >
             Clear Top Tracks
           </button>
+          <div className={classes.explanation}> Clear top tracks to show buttons again.</div>
           <div className={classes.heading}>
             Top tracks from the {props.shownTimeRange.toLowerCase()}
           </div>

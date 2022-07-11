@@ -15,11 +15,13 @@ const TopArtistsList = (props) => {
           >
             Clear Top Artists
           </button>
+          <div className={classes.explanation}> Clear top artists to show buttons again.</div>
           <div className={classes.heading}>
             Top artists from the {props.shownTimeRange.toLowerCase()}
           </div>
         </>
       )}
+      
       <ul>
         {topArtistsArray ? (
           topArtistsArray.map((artist) => (

@@ -4,6 +4,13 @@
   font-size: 16px;
 }
 
+.explanation {
+  margin: 1rem;
+  text-align: center;
+  color: #1ed760;
+}
+
+
 @media (min-width: 768px) {
   .heading {
     font-size: 32px;
